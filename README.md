@@ -1,6 +1,6 @@
 # HimigKape
 
-A small, responsive landing site for a local coffee spot called **HimigKape** — a place where great coffee meets music. This static project showcases a hero section, featured items, a full menu rendered from local images, and a simple contact form. Built with plain HTML, modular CSS, and a touch of vanilla JavaScript for interactivity.
+A small landing site for a coffee spot called HimigKape — a place where great coffee meets music. This static project showcases a hero section, featured items, a full menu rendered from local images, and a simple contact form. Built with plain HTML, modular CSS, and a touch of vanilla JavaScript for interactivity.
 
 ---
 
