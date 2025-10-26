@@ -1,0 +1,80 @@
+.hero {
+  --hero-overlay: rgba(39, 16, 2, 0.945);
+  min-height: 100vh;
+  padding: 6rem 0;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  background-image: url("https://www.allrecipes.com/thmb/gk1cHP21-syS3M_dz1cr6DWxhfE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1165807395-2000-28ea3eaf72f34ddaa97d9a54ca0c6025.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--hero-overlay), rgba(11, 6, 3, 0.7));
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 680px;
+  padding-top: 1rem;
+  text-align: left;
+}
+.hero-art {
+  flex: 1;
+  text-align: right;
+  align-self: flex-start;
+}
+.hero-art img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.6rem, 6.5vw, 4.8rem);
+  line-height: 1.02;
+  margin: 0 0 0.6rem 0;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.hero .lead {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.94);
+  max-width: 46rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 4.5rem 0 2rem;
+  }
+  .hero-copy {
+    padding-top: 0.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+  .hero-art {
+    display: none;
+  }
+}

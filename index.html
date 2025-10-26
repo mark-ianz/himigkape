@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HimigKape — Coffee &amp; Community</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/hero-section.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">Himig<span>Kape</span></a>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#featured">Featured</a>
+          <a href="./menu.html">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 class="catch">Wake up to the rhythm of every cup</h1>
+            <p class="lead">
+              A place where great coffee meets music — handcrafted, small-batch
+              roasts and live or curated himig to brighten your day.
+            </p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#menu">See Menu</a>
+              <a class="btn ghost" href="#about">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-grid">
+            <div>
+              <h2>Our Story</h2>
+              <p>
+                HimigKape is a coffee spot with a himig. We bring coffee and
+                music together — sourcing beans from small farms and roasting
+                them to highlight local flavors while sharing sounds that
+                inspire community and conversation.
+              </p>
+              <p class="muted">Open daily • Freshly brewed • Friendly faces</p>
+            </div>
+            <div class="about-art">
+              <img src="images/logo.png" alt="HimigKape Logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="menu">
+        <div class="container">
+          <h2>Featured</h2>
+          <p class="muted">Small batch favorites — rotating seasonally.</p>
+          <div class="cards">
+            <article class="card">
+              <div class="card-media">
+                <img src="./images/menu/CARAMEL MACCHIATO.png" />
+              </div>
+              <h3>Caramel Macchiato</h3>
+              <p class="muted">
+                Creamy espresso with layers of caramel sweetness.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img src="./images/menu/ICED AMERICANO.png" />
+              </div>
+              <h3>Iced Americano</h3>
+              <p class="muted">
+                Bold espresso shots over chilled water and ice.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img src="./images/menu/DARK CHOCO MOCHA.png" />
+              </div>
+              <h3>Dark Choco Mocha</h3>
+              <p class="muted">
+                Rich chocolate and espresso blend, topped with whipped cream.
+              </p>
+            </article>
+          </div>
+          <div class="explore-banner">
+            <a class="btn large primary" href="menu.html">Explore Full Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <p class="muted">
+            Questions, catering requests or feedback? Drop us a line below.
+          </p>
+          <form class="contact-form" onsubmit="return false;">
+            <label class="sr-only" for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required
+            />
+
+            <label class="sr-only" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="your@email.com"
+              required
+            />
+
+            <label class="sr-only" for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="How can we help?"
+              required
+            ></textarea>
+
+            <div class="contact-actions">
+              <button class="btn primary" type="submit">Send message</button>
+              <p class="note muted">We'll get back within 2 business days.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <p class="muted">© 2025 HimigKape — All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 4l-8 8h5v8h6v-8h5z" />
+      </svg>
+    </button>
+
+    <script>
+      (function () {
+        const btn = document.getElementById("backToTop");
+        if (!btn) return;
+
+        const toggle = () => {
+          if (window.scrollY > 320) btn.classList.add("show");
+          else btn.classList.remove("show");
+        };
+
+        // initial check
+        toggle();
+
+        window.addEventListener("scroll", toggle, { passive: true });
+
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
+</html>
